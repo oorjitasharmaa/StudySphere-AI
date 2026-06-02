@@ -44,10 +44,6 @@ StudySphere AI/
 │
 └── uploads/
 
-## 🚀 Live Demo
-
-Add your Render deployment URL here.
-
 ## ⚙️ Installation
 
 1. Clone the repository

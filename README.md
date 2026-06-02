@@ -23,7 +23,6 @@ StudySphere AI is an AI-powered learning platform that helps students summarize 
 * PyPDF2
 
 ## 📂 Project Structure
-## 📂 Project Structure
 
 ```text
 StudySphere AI/

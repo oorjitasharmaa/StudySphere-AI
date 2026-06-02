@@ -42,7 +42,7 @@ StudySphere AI/
 │ ├── quiz.html
 │ └── chat.html
 │
-└── uploads/
+└─ uploads/
 
 ## ⚙️ Installation
 
@@ -59,10 +59,10 @@ GROQ_API_KEY=your_api_key
 
 python app.py
 
-## Live Demo 
+## 🔥 Live Demo 
 https://studysphere-ai-d3oc.onrender.com/
 
 ## 👩‍💻 Author
 
 Oorjita Sharma
-B.Tech CSE Student
+

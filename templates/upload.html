@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Upload Notes</title>
+
+    <style>
+
+        body{
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #141e30, #243b55);
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            height: 100vh;
+        }
+
+        .box{
+
+            background-color: rgba(255,255,255,0.1);
+
+            padding: 40px;
+
+            border-radius: 15px;
+
+            text-align: center;
+
+            width: 400px;
+        }
+
+        h1{
+            margin-bottom: 25px;
+        }
+
+        input{
+            margin-bottom: 20px;
+        }
+
+        button{
+
+            background-color: #00bfff;
+
+            color: white;
+
+            border: none;
+
+            padding: 12px 25px;
+
+            border-radius: 8px;
+
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: #009acd;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>📚 Upload Notes</h1>
+
+        <form method="POST" enctype="multipart/form-data">
+
+            <input type="file" name="notes">
+
+            <br>
+
+            <button>
+                Upload
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

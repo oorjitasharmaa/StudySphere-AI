@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Login - StudySphere AI</title>
+
+    <style>
+
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: Poppins;
+            background: linear-gradient(to right, #141e30, #243b55);
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-box{
+
+            background-color: rgba(255,255,255,0.1);
+
+            padding: 40px;
+
+            width: 350px;
+
+            border-radius: 15px;
+
+            text-align: center;
+
+            backdrop-filter: blur(10px);
+
+            color: white;
+        }
+
+        h1{
+            margin-bottom: 30px;
+        }
+
+        input{
+
+            width: 100%;
+
+            padding: 12px;
+
+            margin-bottom: 20px;
+
+            border: none;
+
+            border-radius: 8px;
+        }
+
+        button{
+
+            width: 100%;
+
+            padding: 12px;
+
+            background-color: #00bfff;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 8px;
+
+            font-size: 16px;
+
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: #009acd;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="login-box">
+
+        <h1> Login</h1>
+
+        <form method="POST">
+
+            <input type="text" name="username" placeholder="Enter Username">
+
+            <input type="password" name="password" placeholder="Enter Password">
+
+            <button>
+                Login
+            </button>
+
+        </form>
+
+        <br>
+        <a href="/signup" style="color:white;">
+            Create New Account
+        </a>
+
+    </div>
+
+</body>
+
+</html>

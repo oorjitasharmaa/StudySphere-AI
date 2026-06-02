@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Dashboard</title>
+
+    <style>
+
+        body{
+            margin:0;
+            font-family:'Poppins',sans-serif;
+            background:linear-gradient(to right,#141e30,#243b55);
+            color:white;
+        }
+
+        .container{
+            padding:50px;
+            text-align:center;
+        }
+
+        h1{
+            font-size:50px;
+            margin-bottom:40px;
+        }
+
+        .buttons{
+            margin-bottom:50px;
+        }
+
+        .buttons button{
+
+            padding:12px 25px;
+
+            border:none;
+
+            border-radius:8px;
+
+            color:white;
+
+            font-size:16px;
+
+            cursor:pointer;
+
+            margin:10px;
+        }
+
+        .upload-btn{
+            background: skyblue;
+        }
+
+        .quiz-btn{
+            background:green;
+        }
+
+        .chat-btn{
+            background: orange;
+        }
+
+        .cards{
+            display:flex;
+            justify-content:center;
+            gap:30px;
+            flex-wrap:wrap;
+        }
+
+        .card{
+
+            background:rgba(255,255,255,0.1);
+
+            width:250px;
+
+            padding:30px;
+
+            border-radius:15px;
+
+            backdrop-filter:blur(10px);
+
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-5px);
+        }
+
+        .card h2{
+            font-size:40px;
+            margin-bottom:10px;
+        }
+
+        .card p{
+            font-size:18px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>📊 StudySphere Dashboard</h1>
+
+        <div class="buttons">
+
+            <a href="/upload">
+
+                <button class="upload-btn">
+                    📚 Upload Notes
+                </button>
+
+            </a>
+
+            <a href="/quiz">
+
+                <button class="quiz-btn">
+                    📝 Generate Quiz
+                </button>
+
+            </a>
+
+            <a href="/chat">
+
+                <button class="chat-btn">
+                    💬 Chat With Notes
+                </button>
+
+            </a>
+
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h2>{{ notes_count }}</h2>
+
+                <p>Uploaded Notes</p>
+
+            </div>
+
+            <div class="card">
+
+                <h2>{{ quiz_count }}</h2>
+
+                <p>Generated Quizzes</p>
+
+            </div>
+
+            <div class="card">
+
+                <h2>{{ chat_count }}</h2>
+
+                <p>AI Chats</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

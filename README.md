@@ -57,7 +57,29 @@ Users can upload PDF study material and use AI to generate structured study guid
 - Werkzeug
 
 ---
+⚙️ Installation
 
+Clone the repository:
+
+git clone 
+
+Move into the project folder:
+
+cd StudySphere-AI
+
+Create a virtual environment:
+
+python -m venv venv
+
+Activate the virtual environment:
+
+Windows
+
+venv\Scripts\activate
+
+Install the required dependencies:
+
+pip install -r requirements.txt
 
 ## 📂 Project Structure
 

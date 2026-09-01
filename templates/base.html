@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        {% block title %}
+            StudySphere AI
+        {% endblock %}
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+</head>
+
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+
+        <!-- Brand -->
+        <a
+            href="{{ url_for('home') }}"
+            class="brand"
+        >
+            Study<span>Sphere</span> AI
+        </a>
+
+
+        <!-- Navigation Links -->
+        <div class="nav-links">
+
+            {% if current_user %}
+
+                <a href="{{ url_for('dashboard') }}">
+                    Dashboard
+                </a>
+
+                <a
+                    href="{{ url_for('logout') }}"
+                    class="nav-button"
+                >
+                    Logout
+                </a>
+
+            {% else %}
+
+                <a href="{{ url_for('login') }}">
+                    Login
+                </a>
+
+                <a
+                    href="{{ url_for('signup') }}"
+                    class="nav-button"
+                >
+                    Get Started
+                </a>
+
+            {% endif %}
+
+        </div>
+
+    </nav>
+
+
+    <!-- Main Page Content -->
+    <main class="page">
+
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+
+            {% if messages %}
+
+                <div class="flash-stack">
+
+                    {% for category, message in messages %}
+
+                        <div class="flash {{ category }}">
+                            {{ message }}
+                        </div>
+
+                    {% endfor %}
+
+                </div>
+
+            {% endif %}
+
+        {% endwith %}
+
+
+        <!-- Page-Specific Content -->
+        {% block content %}
+        {% endblock %}
+
+    </main>
+
+</body>
+
+</html>

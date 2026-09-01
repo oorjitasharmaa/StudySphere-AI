@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+    Chat With Notes | StudySphere AI
+{% endblock %}
+
+
+{% block content %}
+
+<section class="chat-shell">
+
+    <!-- Page Header -->
+    <div class="content-top">
+
+        <div>
+
+            <div class="eyebrow">
+                CHAT WITH YOUR NOTES
+            </div>
+
+            <h1>
+                {{ document.original_filename }}
+            </h1>
+
+        </div>
+
+
+        <a
+            href="{{ url_for('dashboard') }}"
+            class="secondary-btn"
+        >
+            ← Back to Dashboard
+        </a>
+
+    </div>
+
+
+    <!-- Chat History -->
+    <div class="chat-history">
+
+        {% if history %}
+
+            {% for item in history %}
+
+                <!-- User Question -->
+                <div class="message user-message">
+
+                    <strong>You</strong>
+
+                    <p>
+                        {{ item.question }}
+                    </p>
+
+                </div>
+
+
+                <!-- AI Response -->
+                <div class="message ai-message">
+
+                    <strong>
+                        StudySphere AI
+                    </strong>
+
+                    <p>
+                        {{ item.answer }}
+                    </p>
+
+                </div>
+
+            {% endfor %}
+
+
+        {% else %}
+
+            <!-- Empty Chat State -->
+            <div class="empty-chat">
+
+                <div class="big-icon">
+                    💬
+                </div>
+
+                <h2>Ask Your First Question</h2>
+
+                <p>
+                    Answers are generated based on this document.
+                </p>
+
+            </div>
+
+        {% endif %}
+
+    </div>
+
+
+    <!-- Ask Question Form -->
+    <form
+        method="POST"
+        class="chat-form"
+    >
+
+        <input
+            type="text"
+            name="question"
+            placeholder="Ask anything from these notes..."
+            autocomplete="off"
+            required
+        >
+
+        <button
+            type="submit"
+            class="primary-btn"
+        >
+            Ask AI
+        </button>
+
+    </form>
+
+</section>
+
+{% endblock %}

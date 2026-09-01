@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Upload Notes | StudySphere AI
+{% endblock %}
+
+
+{% block content %}
+
+<div class="upload-wrap">
+
+    <section class="upload-card">
+
+        <div class="eyebrow">
+            ADD TO YOUR LIBRARY
+        </div>
+
+        <h1>Upload Study Notes</h1>
+
+        <p class="muted">
+            PDF only · Maximum file size: 15 MB · Text-based PDFs work best.
+        </p>
+
+
+        <!-- PDF Upload Form -->
+        <form
+            method="POST"
+            enctype="multipart/form-data"
+            class="upload-form"
+        >
+
+            <label class="drop-zone">
+
+                <input
+                    type="file"
+                    name="notes"
+                    accept=".pdf,application/pdf"
+                    required
+                >
+
+                <span class="upload-icon">
+                    ⬆
+                </span>
+
+                <strong>
+                    Choose a PDF File
+                </strong>
+
+                <small>
+                    Your notes remain associated with your account.
+                </small>
+
+            </label>
+
+
+            <button
+                type="submit"
+                class="primary-btn full"
+            >
+                Upload & Generate Study Guide
+            </button>
+
+        </form>
+
+
+        <a
+            href="{{ url_for('dashboard') }}"
+            class="text-link"
+        >
+            ← Back to Dashboard
+        </a>
+
+    </section>
+
+</div>
+
+{% endblock %}

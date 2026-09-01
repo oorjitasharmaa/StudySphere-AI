@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}
+    AI Study Guide | StudySphere AI
+{% endblock %}
+
+{% block content %}
+
+<section class="content-shell">
+
+    <div class="content-top">
+
+        <div>
+            <div class="eyebrow">
+                AI STUDY GUIDE
+            </div>
+
+            <h1>
+                {{ document.original_filename }}
+            </h1>
+        </div>
+
+        <a href="{{ url_for('dashboard') }}" class="secondary-btn">
+            ← Back to Dashboard
+        </a>
+
+    </div>
+
+
+    <!-- AI Generated Study Guide -->
+    <div class="ai-output">
+        {{ summary | safe }}
+    </div>
+
+
+    <!-- Study Actions -->
+    <div class="content-actions">
+
+        <a 
+            href="{{ url_for('quiz', document_id=document.id) }}"
+            class="primary-btn"
+        >
+            Generate Quiz →
+        </a>
+
+        <a 
+            href="{{ url_for('chat', document_id=document.id) }}"
+            class="secondary-btn"
+        >
+            Chat With Notes
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}

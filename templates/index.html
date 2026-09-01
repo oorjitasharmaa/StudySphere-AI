@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+    StudySphere AI | Learn Smarter
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero">
+
+    <div class="eyebrow">
+        AI-POWERED STUDY WORKSPACE
+    </div>
+
+    <h1>
+        Turn your notes into a
+        <span>smarter way to study.</span>
+    </h1>
+
+    <p>
+        Upload PDFs, generate structured study guides, test yourself with
+        quizzes, and chat directly with your learning material.
+    </p>
+
+
+    <!-- Hero Buttons -->
+    <div class="hero-actions">
+
+        <a
+            href="{{ url_for('signup') }}"
+            class="primary-btn"
+        >
+            Start Learning Free →
+        </a>
+
+        <a
+            href="{{ url_for('login') }}"
+            class="secondary-btn"
+        >
+            I Already Have an Account
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- Features Section -->
+<section class="feature-grid">
+
+
+    <!-- Smart Documents -->
+    <article class="feature-card">
+
+        <div class="icon">
+            📄
+        </div>
+
+        <h3>Smart Documents</h3>
+
+        <p>
+            Upload your study PDFs safely and keep your personal
+            document library organised.
+        </p>
+
+    </article>
+
+
+    <!-- AI Study Guides -->
+    <article class="feature-card">
+
+        <div class="icon">
+            🧠
+        </div>
+
+        <h3>AI Study Guides</h3>
+
+        <p>
+            Generate clear explanations, important concepts,
+            FAQs, and revision checklists.
+        </p>
+
+    </article>
+
+
+    <!-- Practice Quizzes -->
+    <article class="feature-card">
+
+        <div class="icon">
+            📝
+        </div>
+
+        <h3>Practice Quizzes</h3>
+
+        <p>
+            Create exam-focused multiple-choice questions
+            directly from your uploaded notes.
+        </p>
+
+    </article>
+
+
+    <!-- Chat With Notes -->
+    <article class="feature-card">
+
+        <div class="icon">
+            💬
+        </div>
+
+        <h3>Chat With Notes</h3>
+
+        <p>
+            Ask questions about your notes and get helpful
+            answers based on your selected document.
+        </p>
+
+    </article>
+
+
+</section>
+
+{% endblock %}

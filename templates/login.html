@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+    Login | StudySphere AI
+{% endblock %}
+
+
+{% block content %}
+
+<div class="auth-wrap">
+
+    <section class="auth-card">
+
+        <div class="eyebrow">
+            WELCOME BACK
+        </div>
+
+        <h1>Continue Learning</h1>
+
+
+        <!-- Login Form -->
+        <form method="POST">
+
+            <label for="username">
+                Username
+            </label>
+
+            <input
+                type="text"
+                id="username"
+                name="username"
+                minlength="3"
+                placeholder="Enter your username"
+                required
+            >
+
+
+            <label for="password">
+                Password
+            </label>
+
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                required
+            >
+
+
+            <button
+                type="submit"
+                class="primary-btn full"
+            >
+                Login
+            </button>
+
+        </form>
+
+
+        <p class="muted center">
+
+            New here?
+
+            <a href="{{ url_for('signup') }}">
+                Create an Account
+            </a>
+
+        </p>
+
+    </section>
+
+</div>
+
+{% endblock %}

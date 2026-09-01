@@ -1,0 +1,207 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+    Dashboard | StudySphere AI
+{% endblock %}
+
+
+{% block content %}
+
+<!-- Dashboard Header -->
+<section class="dashboard-header">
+
+    <div>
+
+        <div class="eyebrow">
+            YOUR WORKSPACE
+        </div>
+
+        <h1>
+            Hi, {{ current_user.username }} 👋
+        </h1>
+
+        <p class="muted">
+            Everything here belongs only to your account.
+        </p>
+
+    </div>
+
+
+    <a
+        href="{{ url_for('upload') }}"
+        class="primary-btn"
+    >
+        + Upload PDF
+    </a>
+
+</section>
+
+
+<!-- Dashboard Statistics -->
+<section class="stats">
+
+    <div class="stat-card">
+
+        <span>📚</span>
+
+        <strong>
+            {{ notes_count }}
+        </strong>
+
+        <p>My Documents</p>
+
+    </div>
+
+
+    <div class="stat-card">
+
+        <span>📝</span>
+
+        <strong>
+            {{ quiz_count }}
+        </strong>
+
+        <p>Generated Quizzes</p>
+
+    </div>
+
+
+    <div class="stat-card">
+
+        <span>💬</span>
+
+        <strong>
+            {{ chat_count }}
+        </strong>
+
+        <p>AI Conversations</p>
+
+    </div>
+
+</section>
+
+
+<!-- Study Library Heading -->
+<section class="section-head">
+
+    <div>
+
+        <h2>My Study Library</h2>
+
+        <p class="muted">
+            Choose a document to continue studying.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Documents -->
+{% if documents %}
+
+    <div class="document-list">
+
+        {% for doc in documents %}
+
+            <article class="document-card">
+
+                <div class="doc-main">
+
+                    <div class="doc-icon">
+                        PDF
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            {{ doc.original_filename }}
+                        </h3>
+
+                        <p class="muted">
+                            Uploaded {{ doc.created_at }}
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Document Actions -->
+                <div class="doc-actions">
+
+                    <a
+                        href="{{ url_for('generate_summary', document_id=doc.id) }}"
+                    >
+                        Summary
+                    </a>
+
+                    <a
+                        href="{{ url_for('quiz', document_id=doc.id) }}"
+                    >
+                        Quiz
+                    </a>
+
+                    <a
+                        href="{{ url_for('chat', document_id=doc.id) }}"
+                    >
+                        Chat
+                    </a>
+
+
+                    <!-- Delete Document -->
+                    <form
+                        method="POST"
+                        action="{{ url_for('delete_document', document_id=doc.id) }}"
+                        onsubmit="return confirm('Delete this document and its study history?')"
+                    >
+
+                        <button
+                            type="submit"
+                            class="danger-link"
+                        >
+                            Delete
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </article>
+
+        {% endfor %}
+
+    </div>
+
+
+<!-- Empty Library -->
+{% else %}
+
+    <div class="empty-state">
+
+        <div class="big-icon">
+            📚
+        </div>
+
+        <h2>Your Study Library is Empty</h2>
+
+        <p>
+            Upload your first PDF and let StudySphere AI transform it
+            into useful learning material.
+        </p>
+
+        <a
+            href="{{ url_for('upload') }}"
+            class="primary-btn"
+        >
+            Upload First PDF
+        </a>
+
+    </div>
+
+{% endif %}
+
+
+{% endblock %}

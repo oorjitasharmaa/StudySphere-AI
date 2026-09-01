@@ -4,6 +4,8 @@ StudySphere AI is an AI-powered study platform that helps students learn smarter
 
 Users can upload PDF study material and use AI to generate structured study guides, practice quizzes, and ask questions directly from their uploaded notes.
 
+### Live Demo : https://studysphere-ai-1-x8vc.onrender.com
+
 ---
 
 ## ✨ Features
@@ -81,6 +83,12 @@ venv\Scripts\activate
 
 pip install -r requirements.txt
 
+### Run the application
+
+ 
+```text python app.py 
+```
+
 ## 📂 Project Structure
 
 ```text
@@ -106,3 +114,20 @@ StudySphere-AI/
 │
 └── static/
     └── style.css
+```
+## 🌟 Future Improvements
+📊 Quiz scoring system
+🎯 Multiple quiz difficulty levels
+📈 Learning progress tracking
+🗂️ Flashcard generation
+🔊 Text-to-speech support
+📱 Further mobile improvements
+📄 Support for more document formats
+🤖 Additional AI model options
+
+
+## 👩‍💻 Author
+
+### Oorjita Sharma
+B.Tech Computer Science Engineering Student
+

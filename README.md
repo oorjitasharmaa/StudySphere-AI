@@ -58,6 +58,7 @@ Users can upload PDF study material and use AI to generate structured study guid
 
 ---
 
+
 ## 📂 Project Structure
 
 ```text

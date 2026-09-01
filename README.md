@@ -67,26 +67,40 @@ git clone https://github.com/oorjitasharmaa/StudySphere-AI
 
 ### Move into the project folder:
 
+
+```text
 cd StudySphere-AI
+
+```
 
 ### Create a virtual environment:
 
+
+```text
 python -m venv venv
+```
 
 ### Activate the virtual environment:
 
 Windows
 
+
+```text
 venv\Scripts\activate
+```
 
 ### Install the required dependencies:
 
+
+```text
 pip install -r requirements.txt
+```
 
 ### Run the application
 
  
-```text python app.py 
+```text
+python app.py 
 ```
 
 ## 📂 Project Structure
@@ -116,14 +130,14 @@ StudySphere-AI/
     └── style.css
 ```
 ## 🌟 Future Improvements
-📊 Quiz scoring system
-🎯 Multiple quiz difficulty levels
-📈 Learning progress tracking
-🗂️ Flashcard generation
-🔊 Text-to-speech support
-📱 Further mobile improvements
-📄 Support for more document formats
-🤖 Additional AI model options
+- 📊 Quiz scoring system
+- 🎯 Multiple quiz difficulty levels
+- 📈 Learning progress tracking
+- 🗂️ Flashcard generation
+- 🔊 Text-to-speech support
+- 📱 Further mobile improvements
+- 📄 Support for more document formats
+- 🤖 Additional AI model options
 
 
 ## 👩‍💻 Author
